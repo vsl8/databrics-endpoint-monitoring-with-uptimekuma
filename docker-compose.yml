@@ -1,0 +1,10 @@
+
+services: 
+# ── Databricks Monitor ───────────────────────────────────────────────────────
+  databricks-monitor:
+    image: databricks-monitor:latest
+    container_name: databricks-monitor
+    restart: unless-stopped
+    env_file:
+      - .env
+
